@@ -112,20 +112,10 @@ vector<wstring> GatherWordsLikeThis(wstring wordToMatch, int currentLine, int li
 							? currentLine + ScanRadius 
 							: linesCount;
 
-	EditorSetPosition editorSetPosition;
-	editorSetPosition.CurPos = -1; 
-	editorSetPosition.CurTabPos = -1; 
-	editorSetPosition.TopScreenLine = -1; 
-	editorSetPosition.LeftPos = -1;
-	editorSetPosition.Overtype = -1;
-
 	EditorGetString getStringInfo;
-	getStringInfo.StringNumber = -1; 
-	
 	for (int lineNumber = firstLineToScan; lineNumber < lastLineToScan; lineNumber++)
 	{
-		editorSetPosition.CurLine = lineNumber;
-		Info.EditorControl(ECTL_SETPOSITION, &editorSetPosition);
+		getStringInfo.StringNumber = lineNumber;
 		Info.EditorControl(ECTL_GETSTRING, &getStringInfo);
 		vector<wstring> wordsOfLine = Split(wstring(getStringInfo.StringText));
 		for (vector<wstring>::const_iterator i = wordsOfLine.begin(); i != wordsOfLine.end(); ++i)
@@ -138,8 +128,6 @@ vector<wstring> GatherWordsLikeThis(wstring wordToMatch, int currentLine, int li
 			}
 		}
 	}
-	editorSetPosition.CurLine = currentLine;
-	Info.EditorControl(ECTL_SETPOSITION, &editorSetPosition);
 	return vector<wstring>(result.begin(), result.end());
 }
 
