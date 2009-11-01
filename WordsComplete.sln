@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WordsComplete", "WordsComplete.vcproj", "{7FAC1588-6404-4B47-BF68-295DEFC349ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FAC1588-6404-4B47-BF68-295DEFC349ED}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7FAC1588-6404-4B47-BF68-295DEFC349ED}.Debug|Win32.Build.0 = Debug|Win32
+		{7FAC1588-6404-4B47-BF68-295DEFC349ED}.Release|Win32.ActiveCfg = Release|Win32
+		{7FAC1588-6404-4B47-BF68-295DEFC349ED}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
