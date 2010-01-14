@@ -187,7 +187,7 @@ wstring GetCurrentWord(int position)
 bool IsDelimiter(wchar_t ch)
 {
 	std::locale defaultLocale;
-	return std::isspace(ch, defaultLocale) || std::ispunct(ch, defaultLocale);
+	return std::isspace(ch, defaultLocale) || (ch != L'_' && std::ispunct(ch, defaultLocale));
 }
 
 bool IsNotDelimiter(wchar_t ch)
